@@ -1,25 +1,46 @@
-import logo from './logo.svg';
+import { useEffect, useState } from 'react'
 import './App.css';
+import Form from "./components/Form"
+import MovieDisplay from "./components/MovieDisplay"
+
+
 
 function App() {
+
+  const apiKey = '45bfa027';
+
+  const [movie, setMovie] =useState(null)
+
+  const getMovie = async (searchTerm) => {
+
+      const response = await fetch(`http://www.omdbapi.com/?apikey=${apiKey}&t=${searchTerm}`
+         )
+        
+      const data = await response.json()
+
+      setMovie(data)
+
+    };
+
+    // ****This is used to generate specific title to appear when page is uploaded******
+    // useEffect (() => {getMovie('Spice Girls')}, [])
+
+    useEffect (() => {
+
+      const movies = ['Wonder Woman 1984', 'Spice Girls', 'Devil Wears Prada', 'Wonder Woman',]
+
+      const index = Math.floor(Math.random() * movies.length)
+
+      getMovie(movies[index])
+    }, [])
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Form moviesearch={getMovie} />
+      <MovieDisplay movie={movie} />
     </div>
   );
 }
+
 
 export default App;
