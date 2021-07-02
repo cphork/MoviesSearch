@@ -13,7 +13,7 @@ code {
 }
 
 img {
-  border: 3px solid aquamarine;
+  border: 5px solid aquamarine;
 }
 
 .search-btn {
@@ -43,8 +43,16 @@ h2, h3, h4 {
   margin-left: 25px;
   margin-right: 25px;
   margin-top: -15px;
+  text-align: left;
+  font-family: fantasy;
 }
 
 .actors-text, .plot-text, .directors-text, .writer-text, .awards-text, .imdb-text, .box-text, .website-text {
-  color: white;
+  color: aquamarine;
+  font-weight: bolder;
+  font-family:monospace;
+  font-size: 20px;
+  text-align: left;
+  margin-left: 25px;
+  
 }
