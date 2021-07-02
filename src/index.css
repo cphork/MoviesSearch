@@ -13,5 +13,38 @@ code {
 }
 
 img {
-  border: 3px solid black;
+  border: 3px solid aquamarine;
+}
+
+.search-btn {
+  margin-top: 50px;
+}
+
+html {
+  background: black;
+}
+h2, h3, h4 {
+  color: white;
+}
+
+.title {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  color: aquamarine;
+}
+
+.year, .genre {
+  margin-top: -15px;
+  font-family: monospace;
+  font-size: 15px;
+}
+
+.actors, .plot, .director, .writer, .awards, .imdb, .box, .website{
+  font-size: 15px;
+  margin-left: 25px;
+  margin-right: 25px;
+  margin-top: -15px;
+}
+
+.actors-text, .plot-text, .directors-text, .writer-text, .awards-text, .imdb-text, .box-text, .website-text {
+  color: white;
 }

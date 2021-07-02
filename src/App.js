@@ -9,30 +9,30 @@ function App() {
 
   const apiKey = '45bfa027';
 
-  const [movie, setMovie] =useState(null)
+  const [movie, setMovie] = useState(null)
 
   const getMovie = async (searchTerm) => {
 
-      const response = await fetch(`http://www.omdbapi.com/?apikey=${apiKey}&t=${searchTerm}`
-         )
-        
-      const data = await response.json()
+    const response = await fetch(`http://www.omdbapi.com/?apikey=${apiKey}&t=${searchTerm}`
+    )
 
-      setMovie(data)
+    const data = await response.json()
 
-    };
+    setMovie(data)
 
-    // ****This is used to generate specific title to appear when page is uploaded******
-    // useEffect (() => {getMovie('Spice Girls')}, [])
+  };
 
-    useEffect (() => {
+  // ****This is used to generate specific title to appear when page is uploaded******
+  // useEffect (() => {getMovie('Spice Girls')}, [])
 
-      const movies = ['Wonder Woman 1984', 'Spice Girls', 'Devil Wears Prada', 'Wonder Woman',]
+  useEffect(() => {
 
-      const index = Math.floor(Math.random() * movies.length)
+    const movies = ['Wonder Woman 1984', 'Spice Girls', 'Devil Wears Prada', 'Wonder Woman',]
 
-      getMovie(movies[index])
-    }, [])
+    const index = Math.floor(Math.random() * movies.length)
+
+    getMovie(movies[index])
+  }, [])
 
   return (
     <div className="App">
