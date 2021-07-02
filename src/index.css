@@ -12,7 +12,7 @@ code {
     monospace;
 }
 
-img {
+.movie-img {
   border: 5px solid aquamarine;
 }
 
@@ -55,4 +55,14 @@ h2, h3, h4 {
   text-align: left;
   margin-left: 25px;
   
+}
+
+.film {
+  height: 50px;
+  width: 50px;
+}
+
+.header-logo {
+display: flex;
+justify-content: center;
 }

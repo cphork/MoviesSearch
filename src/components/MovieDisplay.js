@@ -9,7 +9,7 @@ const MovieDisplay = ({ movie }) => {
                 <h2 className='title'>{movie.Title}</h2>
                 <h3 className='year'>Year released: {movie.Year}</h3>
                 <h3 className='genre'>Genre: {movie.Genre}</h3>
-                <img src={movie.Poster} alt={movie.Title} />
+                <img className='movie-img' src={movie.Poster} alt={movie.Title} />
                 <p className='actors-text'>Actors:</p>
                 <h4 className='actors'>{movie.Actors}</h4>
                 <p className='plot-text'>Plot:</p>
